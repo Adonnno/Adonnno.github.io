@@ -51,7 +51,7 @@ header nav ul li a {
     text-align: center;
     margin-bottom: 20px;
     font-size: 32px;
-    color: #fff; /* 제목 색상 변경 */
+    color: #333; /* 제목 색상 변경 */
 }
 
 .section p {
