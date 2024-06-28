@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    width: 70%; /* 줄어든 페이지 폭 */
+    margin: 0 auto;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #fff; /* 제목 색상 변경 */
+}
+
+.section p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.skills-grid-container {
+    width: 25%; /* Skills 섹션의 폭을 25%로 설정 */
+    margin: 0 auto;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.skills-grid img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: contain; /* 이미지가 원 안에서 잘리지 않도록 설정 */
+    margin: 10px;
+    border: 2px solid #333; /* 윤곽선 두께 조정 */
+    transition: transform 0.5s ease-in-out; /* 애니메이션 속도 조정 */
+}
+
+.skills-grid img:hover {
+    transform: rotateY(360deg); /* 회전 효과 */
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Make grid responsive */
+}
+
+.project-card {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    border-radius: 8px;
+    transition: transform 0.3s, background-color 0.3s;
+    text-align: center; /* Center content */
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Dynamic effects */
+.dynamic-element {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.5);
+    pointer-events: none;
+    transition: transform 0.1s;
+}
+
+/* Command-line effect */
+.cmd-effect {
+    background-color: #000;
+    color: #fff; /* 글자 색상을 하얀색으로 변경 */
+    font-family: 'Courier New', Courier, monospace; /* 커맨드 라인 폰트 */
+    width: 50%; /* 폭을 50%로 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+    border-radius: 8px;
+    overflow: hidden; /* 둥근 모서리 */
+}
+
+.cmd-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.cmd-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.cmd-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cmd-button.close {
+    background-color: #ff5f56;
+}
+
+.cmd-button.minimize {
+    background-color: #ffbd2e;
+}
+
+.cmd-button.maximize {
+    background-color: #27c93f;
+}
+
+.cmd-title {
+    flex-grow: 1;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.cmd-body {
+    padding: 20px;
+}
+
+#about-text::after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 1em;
+    background-color: #fff; /* 커서 색상을 하얀색으로 변경 */
+    animation: blink 1s steps(2, start) infinite;
+    vertical-align: bottom;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}

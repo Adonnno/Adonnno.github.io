@@ -1,13 +1,103 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
-    </head>
-    <body>
-        <h1>HELLO WORLD</h1>
-        <p>This is my <strong>GitHub Pages</strong></p>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container cmd-effect">
+            <div class="cmd-header">
+                <div class="cmd-buttons">
+                    <span class="cmd-button close"></span>
+                    <span class="cmd-button minimize"></span>
+                    <span class="cmd-button maximize"></span>
+                </div>
+                <div class="cmd-title">About Me - Command Prompt</div>
+            </div>
+            <div class="cmd-body">
+                <p id="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="skills-grid-container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <img src="images/html.png" alt="HTML">
+                <img src="images/css.png" alt="CSS">
+                <img src="images/js.png" alt="JavaScript">
+                <img src="images/node.png" alt="Node.js">
+                <img src="images/python.png" alt="Python">
+                <img src="images/tensorflow.png" alt="Tensorflow">
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="images/project1.jpg" alt="Project One">
+                    <h3>Project One</h3>
+                    <p>A description of the first project.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/project2.jpg" alt="Project Two">
+                    <h3>Project Two</h3>
+                    <p>A description of the second project.</p>
+                </div>
+                <div class="project-card">
+                    <img src="images/project3.jpg" alt="Project Three">
+                    <h3>Project Three</h3>
+                    <p>A description of the third project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
