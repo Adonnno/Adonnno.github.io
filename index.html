@@ -1,103 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yegun Lee — Portfolio</title>
+  <meta name="description" content="Yegun Lee — Computer Science & Engineering student at HUFS, interested in games, AI and servers.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo">Yegun Lee</a>
+      <nav>
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#skills" data-i18n="nav.skills">Skills</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#activities" data-i18n="nav.activities">Activities</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" data-lang="ko">KO</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </header>
 
-    <section id="about" class="section">
-        <div class="container cmd-effect">
-            <div class="cmd-header">
-                <div class="cmd-buttons">
-                    <span class="cmd-button close"></span>
-                    <span class="cmd-button minimize"></span>
-                    <span class="cmd-button maximize"></span>
-                </div>
-                <div class="cmd-title">About Me - Command Prompt</div>
-            </div>
-            <div class="cmd-body">
-                <p id="about-text"></p>
-            </div>
-        </div>
+  <main id="top">
+    <section class="hero wrap">
+      <p class="eyebrow" data-i18n="hero.eyebrow">Hankuk University of Foreign Studies · Computer Science &amp; Engineering</p>
+      <h1>
+        <span data-i18n="hero.hello">Hi, I'm</span>
+        <span class="name" data-i18n="hero.name">Yegun Lee</span>
+      </h1>
+      <p class="lead" data-i18n="hero.lead">A senior CS student who enjoys building things across games, AI and servers.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects" data-i18n="hero.cta">View projects</a>
+        <a class="btn" href="https://github.com/Adonnno" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
     </section>
 
-    <section id="skills" class="section">
-        <div class="skills-grid-container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <img src="images/html.png" alt="HTML">
-                <img src="images/css.png" alt="CSS">
-                <img src="images/js.png" alt="JavaScript">
-                <img src="images/node.png" alt="Node.js">
-                <img src="images/python.png" alt="Python">
-                <img src="images/tensorflow.png" alt="Tensorflow">
-            </div>
-        </div>
+    <section id="about" class="section wrap">
+      <h2 data-i18n="about.title">About</h2>
+      <div class="about-grid">
+        <p class="about-text" data-i18n="about.body">I'm a 4th-year student in Computer Science &amp; Engineering at Hankuk University of Foreign Studies. I like turning ideas into working software, and I'm currently exploring three areas: games, AI and server development.</p>
+        <dl class="facts">
+          <div><dt data-i18n="about.school">School</dt><dd data-i18n="about.schoolValue">HUFS, Computer Science &amp; Engineering</dd></div>
+          <div><dt data-i18n="about.year">Year</dt><dd data-i18n="about.yearValue">Senior (4th year)</dd></div>
+        </dl>
+      </div>
+
+      <h3 class="sub" data-i18n="interests.title">Interests</h3>
+      <div class="cards three">
+        <article class="card">
+          <span class="icon" aria-hidden="true">🎮</span>
+          <h4 data-i18n="interests.game">Games</h4>
+          <p data-i18n="interests.gameBody">Designing gameplay systems and building fun, interactive experiences.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">🤖</span>
+          <h4 data-i18n="interests.ai">AI</h4>
+          <p data-i18n="interests.aiBody">Applying language models and data to real problems.</p>
+        </article>
+        <article class="card">
+          <span class="icon" aria-hidden="true">🖥️</span>
+          <h4 data-i18n="interests.server">Server</h4>
+          <p data-i18n="interests.serverBody">Building reliable back-end services and APIs.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <img src="images/project1.jpg" alt="Project One">
-                    <h3>Project One</h3>
-                    <p>A description of the first project.</p>
-                </div>
-                <div class="project-card">
-                    <img src="images/project2.jpg" alt="Project Two">
-                    <h3>Project Two</h3>
-                    <p>A description of the second project.</p>
-                </div>
-                <div class="project-card">
-                    <img src="images/project3.jpg" alt="Project Three">
-                    <h3>Project Three</h3>
-                    <p>A description of the third project.</p>
-                </div>
-            </div>
+    <section id="skills" class="section wrap">
+      <h2 data-i18n="skills.title">Skills</h2>
+      <div class="skill-groups">
+        <div>
+          <h4 data-i18n="skills.lang">Languages</h4>
+          <ul class="chips"><li>C++</li><li>Java</li><li>Python</li><li>JavaScript</li><li>HTML / CSS</li></ul>
         </div>
+        <div>
+          <h4 data-i18n="skills.fw">Frameworks &amp; Libraries</h4>
+          <ul class="chips"><li>React</li><li>Spring Boot</li><li>pandas</li></ul>
+        </div>
+        <div>
+          <h4 data-i18n="skills.tools">Tools</h4>
+          <ul class="chips"><li>Git / GitHub</li><li>Jupyter</li><li>OpenAI API</li></ul>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <form>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+    <section id="projects" class="section wrap">
+      <h2 data-i18n="projects.title">Projects</h2>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-
-                <button type="submit">Send</button>
-            </form>
+      <article class="project featured">
+        <div class="project-head">
+          <span class="tag" data-i18n="projects.ohgood.tag">Data Youth Campus · 2023 · Team project</span>
+          <h3 data-i18n="projects.ohgood.name">Eongamsaengsim (언감생心)</h3>
         </div>
+        <p data-i18n="projects.ohgood.body">A web app that checks ChatGPT's answers for language sensitivity. It flags expressions that may be discriminatory or offensive, grouped into categories such as disability &amp; medical history, gender &amp; family, social status, origin and profanity.</p>
+        <ul class="points">
+          <li data-i18n="projects.ohgood.p1">React front-end that sends questions to the OpenAI Chat Completions API</li>
+          <li data-i18n="projects.ohgood.p2">Built a labeled dataset with a Python (pandas) dictionary-matching labeling script</li>
+          <li data-i18n="projects.ohgood.p3">Shows flagged words by category so users can review the response</li>
+        </ul>
+        <ul class="chips small"><li>React</li><li>OpenAI API</li><li>Python</li><li>pandas</li><li>Jupyter</li></ul>
+        <a class="link" href="https://github.com/Adonnno/ohgoodproject" target="_blank" rel="noopener" data-i18n="projects.repo">View repository ↗</a>
+      </article>
+
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <section id="activities" class="section wrap">
+      <h2 data-i18n="act.title">Activities &amp; Awards</h2>
+      <ul class="timeline">
+        <li>
+          <span class="tag" data-i18n="act.award.tag">Award · 2023</span>
+          <h3 data-i18n="act.award.name">Yongin SW/AI Hackathon — Encouragement Award</h3>
+          <p data-i18n="act.award.body">Received the Encouragement Award at the 2023 Yongin City SW/AI Hackathon.</p>
+        </li>
+        <li>
+          <span class="tag" data-i18n="act.gdsc.tag">Club</span>
+          <h3 data-i18n="act.gdsc.name">GDSC (Google Developer Student Clubs)</h3>
+          <p data-i18n="act.gdsc.body">Member of a Google-supported developer student community, learning and building with fellow students.</p>
+        </li>
+      </ul>
+    </section>
 
-    <script src="scripts.js"></script>
+    <section id="contact" class="section wrap contact">
+      <h2 data-i18n="contact.title">Contact</h2>
+      <p data-i18n="contact.body">Feel free to reach out about projects, collaboration or anything else.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="mailto:so517273@gmail.com">so517273@gmail.com</a>
+        <a class="btn" href="https://github.com/Adonnno" target="_blank" rel="noopener">github.com/Adonnno ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>© <span id="year"></span> Yegun Lee</p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
